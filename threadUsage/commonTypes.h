@@ -5,6 +5,12 @@
 #include <QVector>
 #include <QMetaType>
 
+enum UiType
+{
+    UiType_Device = 0,
+    UiType_Monitor = 1
+};
+
 struct PackMessage
 {
     quint32 steps;                      //当前测试需要的步骤数

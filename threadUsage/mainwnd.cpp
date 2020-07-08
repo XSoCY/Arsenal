@@ -42,7 +42,7 @@ void MainWnd::on_cmdLinkBtnSender_clicked(bool checked)
 
 void MainWnd::on_cmdLinkBtnRecver_toggled(bool checked)
 {
-    if(m_dlgMonitor == nullptr) {
+    if(m_dlgDevice == nullptr) {
         m_dlgDevice = new QDialog(this);
     }
     if(checked) {
@@ -58,7 +58,20 @@ void MainWnd::on_cmdLinkBtnRecver_toggled(bool checked)
     } else {
         //close the Device UI.
         m_dlgDevice->close();
-        delete m_dlgDevice;
+    }
+}
+
+void MainWnd::onDisplayStatus(UiType uiType, bool isDisplay)
+{
+    switch (uiType) {
+    case UiType_Device:
+        ui->cmdLinkBtnRecver->setChecked(isDisplay);
+        break;
+    case UiType_Monitor:
+        ui->cmdLinkBtnSender->setChecked(isDisplay);
+        break;
+    default:
+        break;
     }
 }
 

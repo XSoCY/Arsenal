@@ -2,6 +2,7 @@
 #define MAINWND_H
 
 #include <QWidget>
+#include "commonTypes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWnd; }
@@ -21,6 +22,8 @@ private slots:
     void on_cmdLinkBtnSender_clicked(bool checked);
 
     void on_cmdLinkBtnRecver_toggled(bool checked);
+
+    void onDisplayStatus(UiType uiType, bool isDisplay);
 
 private:
     void adaptSize(QDialog *dlg);

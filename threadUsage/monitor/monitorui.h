@@ -33,10 +33,14 @@ public:
 signals:
     void sendMessage(const PackMessage &message);
     void onMessageRecved(const UnpackMessage &message);
+    void sigDisplayStatus(UiType uiType, bool isDisplay);
 
 private slots:
     void onItemChanged(QTreeWidgetItem *item, int column);
     void onErrMsg(const QString &errMsg);
+
+protected:
+    void closeEvent(QCloseEvent *event);
 
 private:
     void initThreadWorker();

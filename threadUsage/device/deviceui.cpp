@@ -12,3 +12,8 @@ DeviceUi::~DeviceUi()
 {
     delete ui;
 }
+
+void DeviceUi::closeEvent(QCloseEvent *event)
+{
+    emit sigDisplayStatus(UiType_Device, false);
+}
