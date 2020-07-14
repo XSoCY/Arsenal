@@ -19,14 +19,14 @@ public:
     ~MainWnd();
 
 private slots:
-    void on_cmdLinkBtnSender_clicked(bool checked);
+    void on_cmdLinkBtnMonitor_clicked(bool checked);
 
-    void on_cmdLinkBtnRecver_toggled(bool checked);
-
-    void onDisplayStatus(UiType uiType, bool isDisplay);
+    void on_cmdLinkBtnDevice_toggled(bool checked);
 
 private:
+    void initMainUi();
     void adaptSize(QDialog *dlg);
+
 private:
     Ui::MainWnd *ui;
     QDialog     *m_dlgMonitor = nullptr;

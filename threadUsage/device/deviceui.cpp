@@ -15,5 +15,6 @@ DeviceUi::~DeviceUi()
 
 void DeviceUi::closeEvent(QCloseEvent *event)
 {
-    emit sigDisplayStatus(UiType_Device, false);
+    Q_UNUSED(event)
+    qDebug() << Q_FUNC_INFO;
 }

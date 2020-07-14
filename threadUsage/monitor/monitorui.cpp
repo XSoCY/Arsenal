@@ -135,7 +135,8 @@ void MonitorUi::onErrMsg(const QString &errMsg)
 
 void MonitorUi::closeEvent(QCloseEvent *event)
 {
-    emit sigDisplayStatus(UiType_Monitor, false);
+    Q_UNUSED(event)
+    qDebug() << Q_FUNC_INFO;
 }
 
 void MonitorUi::initThreadWorker()

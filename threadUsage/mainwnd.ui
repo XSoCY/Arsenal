@@ -13,15 +13,15 @@
   <property name="windowTitle">
    <string>MainUI</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,1">
+  <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,0,1">
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <widget class="QWidget" name="page_3">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QCommandLinkButton" name="cmdLinkBtnSender">
+        <widget class="QCommandLinkButton" name="cmdLinkBtnMonitor">
          <property name="text">
-          <string>Sender</string>
+          <string>Monitor</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -29,9 +29,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QCommandLinkButton" name="cmdLinkBtnRecver">
+        <widget class="QCommandLinkButton" name="cmdLinkBtnDevice">
          <property name="text">
-          <string>Recver</string>
+          <string>Device</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -44,9 +44,12 @@
     </widget>
    </item>
    <item>
+    <widget class="QMdiArea" name="mdiArea"/>
+   </item>
+   <item>
     <widget class="QTabWidget" name="tabWidgetLogInfo">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">

@@ -16,9 +16,6 @@ public:
     explicit DeviceUi(QWidget *parent = nullptr);
     ~DeviceUi();
 
-signals:
-    void sigDisplayStatus(UiType uiType, bool isDisplay);
-
 protected:
     void closeEvent(QCloseEvent *event);
 
