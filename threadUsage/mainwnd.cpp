@@ -5,9 +5,10 @@
 
 #include <QDialog>
 #include <QScreen>
+#include <QLabel>
 
 MainWnd::MainWnd(QWidget *parent)
-    : QWidget(parent)
+    : Widget(parent)
     , ui(new Ui::MainWnd)
 {
     ui->setupUi(this);
@@ -46,6 +47,10 @@ void MainWnd::on_cmdLinkBtnMonitor_clicked(bool checked)
         //close the Monitor UI.
         m_dlgMonitor->close();
     }
+    //temp test
+    QWidget *label = new QLabel(this);
+    ui->textEdit->setText(label->metaObject()->className());
+    qDebug() << "objectName: " << label->objectName();
 }
 
 void MainWnd::on_cmdLinkBtnDevice_toggled(bool checked)

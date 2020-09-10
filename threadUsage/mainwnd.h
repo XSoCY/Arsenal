@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "commonTypes.h"
+#include "configablewidget/qtobjectregesitor.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWnd; }
@@ -10,7 +11,7 @@ QT_END_NAMESPACE
 
 class MonitorUi;
 class DeviceUi;
-class MainWnd : public QWidget
+class MainWnd : public Widget
 {
     Q_OBJECT
 
@@ -34,4 +35,8 @@ private:
     MonitorUi   *m_monitorUi = nullptr;
     DeviceUi    *m_deviceUi = nullptr;
 };
+BEGIN_REGIST_CONFIGABLEOBJECT_FUNC(MainWnd)
+REGIST_CONFIGABLEOBJECT_FUNC(MainWnd)
+END_REGIST_CONFIGABLEOBJECT_FUNC()
+
 #endif // MAINWND_H
